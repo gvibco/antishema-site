@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="АнтиСхема — интерактивный тренажёр против интернет-мошенничества для школьников. Короткие диалоги, разбор ответов и правила безопасности.">
+  <meta name="theme-color" content="#1d4ed8">
+  <title>АнтиСхема — тренажёр против интернет-мошенничества</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#top">Перейти к содержанию</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="АнтиСхема — на главную">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 2.5 4.5 5.5v6.2c0 4.6 3.2 8.4 7.5 9.8 4.3-1.4 7.5-5.2 7.5-9.8V5.5L12 2.5Z" fill="currentColor" opacity=".14"/>
+            <path d="M12 2.5 4.5 5.5v6.2c0 4.6 3.2 8.4 7.5 9.8 4.3-1.4 7.5-5.2 7.5-9.8V5.5L12 2.5Z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="m8.4 12.1 2.4 2.4 4.8-5.1" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>АнтиСхема</strong>
+          <small>тренажёр безопасности</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <a href="#how">Как работает</a>
+        <a href="trainer.html">Тренажёр</a>
+        <a href="#flags">Красные флаги</a>
+        <a href="#about">О проекте</a>
+        <a class="button button-small" href="trainer.html">Пройти тест</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span> Проект команды «Интернет-защитники» · Школа № 2127</p>
+          <h1>Научись видеть обман <span class="accent">до того</span>, как станет поздно</h1>
+          <p class="lead">Короткие диалоги о реальных схемах мошенников. Выбирай, как поступить, получай разбор и запоминай правила, которые защищают деньги и аккаунты.</p>
+          <div class="hero-actions">
+            <a class="button" href="trainer.html">
+              Пройти тренажёр
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0-4.5-4.5M16 10l-4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="button button-ghost" href="#how">Как это работает</a>
+          </div>
+          <dl class="hero-stats">
+            <div><dt>6</dt><dd>сценариев</dd></div>
+            <div><dt>2</dt><dd>формата заданий</dd></div>
+            <div><dt>~5</dt><dd>минут</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-glow"></div>
+          <div class="phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="phone-status"><span>9:41</span><span>● ● ●</span></div>
+              <div class="phone-contact">
+                <span class="avatar avatar-sm">?</span>
+                <div><strong>Неизвестный</strong><small>в сети</small></div>
+              </div>
+              <div class="phone-chat">
+                <div class="bubble bubble-them">Я из поддержки. Срочно пришли код из СМС.</div>
+                <div class="bubble bubble-me">Не пришлю. Позвоню в банк сам.</div>
+              </div>
+              <div class="phone-verdict">
+                <span class="mini-check">
+                  <svg viewBox="0 0 16 16" fill="none"><path d="m3.5 8.2 2.7 2.7 6.3-6.3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </span>
+                Это безопасный ответ
+              </div>
+            </div>
+          </div>
+          <div class="float-card float-card-a">
+            <span class="float-icon float-icon-blue">
+              <svg viewBox="0 0 20 20" fill="none"><rect x="4.5" y="8.5" width="11" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M7 8.5V6.8a3 3 0 0 1 6 0v1.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            </span>
+            <div><strong>Код из СМС</strong><small>никому и никогда</small></div>
+          </div>
+          <div class="float-card float-card-b">
+            <span class="float-icon float-icon-orange">
+              <svg viewBox="0 0 20 20" fill="none"><path d="M10 3 2.8 16h14.4L10 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 8v3.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="10" cy="13.8" r=".9" fill="currentColor"/></svg>
+            </span>
+            <div><strong>Проверь отправителя</strong><small>а не только текст</small></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Как это работает</p>
+          <h2>Три шага — и ты готов</h2>
+          <p>Один сценарий занимает меньше двух минут. Проходить можно с телефона, регистрация не нужна.</p>
+        </div>
+        <ol class="steps">
+          <li class="step-card">
+            <span class="step-num">01</span>
+            <h3>Ситуация</h3>
+            <p>Появляется сообщение от «банка», «друга» или «работодателя». Всё как в реальном чате.</p>
+          </li>
+          <li class="step-card">
+            <span class="step-num">02</span>
+            <h3>Выбор</h3>
+            <p>Ты решаешь, как поступить. Варианты похожи на те, что предлагают мошенники.</p>
+          </li>
+          <li class="step-card">
+            <span class="step-num">03</span>
+            <h3>Разбор</h3>
+            <p>Сразу видишь, где была ловушка, и запоминаешь короткое правило на будущее.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section cta-section" id="start">
+      <div class="container">
+        <div class="cta-panel">
+          <div class="cta-copy">
+            <p class="eyebrow">Тренажёр</p>
+            <h2>Проверь себя на отдельной странице</h2>
+            <p>6 коротких ситуаций, два формата заданий и разбор каждого ответа. Без регистрации и оценок в журнал.</p>
+          </div>
+          <a class="button" href="trainer.html">
+            Перейти к тесту
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0-4.5-4.5M16 10l-4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section flags-section" id="flags">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Памятка</p>
+          <h2>Шесть красных флагов</h2>
+          <p>Если замечаешь хотя бы один — остановись, не спеши и проверь информацию по официальному каналу.</p>
+        </div>
+        <div class="flags-grid">
+          <article class="flag-card">
+            <span class="flag-icon">
+              <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.7"/><path d="M12 7.5V12l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Торопят</h3>
+            <p>«Срочно», «через две минуты», «иначе всё пропадёт» — давление мешает думать.</p>
+          </article>
+          <article class="flag-card">
+            <span class="flag-icon">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="10" width="14" height="10" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M8 10V7.8a4 4 0 0 1 8 0V10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="12" cy="15" r="1.3" fill="currentColor"/></svg>
+            </span>
+            <h3>Просят код</h3>
+            <p>Код из СМС, пароль или данные карты не нужны настоящему банку и сервису.</p>
+          </article>
+          <article class="flag-card">
+            <span class="flag-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M10 13.5a4 4 0 0 0 5.7 0l2.4-2.4a4 4 0 0 0-5.7-5.7L11 6.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M14 10.5a4 4 0 0 0-5.7 0l-2.4 2.4a4 4 0 0 0 5.7 5.7l1.4-1.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Присылают ссылку</h3>
+            <p>Не переходи по ссылке из чата. Открывай официальное приложение или сайт вручную.</p>
+          </article>
+          <article class="flag-card">
+            <span class="flag-icon">
+              <svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="6" width="17" height="12" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M3.5 10h17" stroke="currentColor" stroke-width="1.7"/><path d="M7 14.5h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            </span>
+            <h3>Просят предоплату</h3>
+            <p>За работу, приз или бронь не должны брать деньги вперёд. Это классическая схема.</p>
+          </article>
+          <article class="flag-card">
+            <span class="flag-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 3.5 4.5 6.4v5.3c0 4.1 3 7.6 7.5 8.8 4.5-1.2 7.5-4.7 7.5-8.8V6.4L12 3.5Z" stroke="currentColor" stroke-width="1.7"/><path d="M9 12.2 11 14l4-4.3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3>Просят секретность</h3>
+            <p>«Только никому не говори» — способ убрать тех, кто мог бы остановить и помочь.</p>
+          </article>
+          <article class="flag-card">
+            <span class="flag-icon">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 7.5 12 13l8-5.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><rect x="4" y="5" width="16" height="14" rx="2.5" stroke="currentColor" stroke-width="1.7"/></svg>
+            </span>
+            <h3>Пишут с нового номера</h3>
+            <p>«Это мама», «это друг» с незнакомого аккаунта — повод позвонить по старому номеру.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container about-grid">
+        <div class="about-copy">
+          <p class="eyebrow">О проекте</p>
+          <h2>«АнтиСхема» — учебный проект 10 «И» класса</h2>
+          <p>Мы собрали типичные схемы интернет-мошенничества и превратили их в короткие задания. Цель проекта — дать школьникам безопасную практику принятия решений до реального столкновения с обманом.</p>
+          <div class="authors">
+            <div class="author-card">
+              <span class="author-avatar">ПИ</span>
+              <div><strong>Посысаев Иван Сергеевич</strong><small>ученик 10 «И» класса</small></div>
+            </div>
+            <div class="author-card">
+              <span class="author-avatar">ШГ</span>
+              <div><strong>Шульга Георгий</strong><small>ученик 10 «И» класса</small></div>
+            </div>
+          </div>
+          <p class="sources">
+            Источники:
+            <a href="https://www.cbr.ru/information_security/pmp/" target="_blank" rel="noopener noreferrer">Банк России о мошеннических схемах</a>,
+            <a href="https://www.cbr.ru/Reception/TopicalMessage/Page/6327" target="_blank" rel="noopener noreferrer">правила защиты кодов</a>.
+            Сценарии вымышленные и созданы для тренировки.
+          </p>
+        </div>
+        <aside class="about-card">
+          <h3>Что внутри</h3>
+          <ul class="check-list">
+            <li>6 коротких сценариев</li>
+            <li>2 формата: диалог и распознавание</li>
+            <li>Разбор каждого ответа</li>
+            <li>Памятка красных флагов</li>
+            <li>Работа на телефоне без регистрации</li>
+          </ul>
+          <a class="button button-ghost" href="trainer.html">Пройти тест</a>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 2.5 4.5 5.5v6.2c0 4.6 3.2 8.4 7.5 9.8 4.3-1.4 7.5-5.2 7.5-9.8V5.5L12 2.5Z" fill="currentColor" opacity=".14"/>
+            <path d="M12 2.5 4.5 5.5v6.2c0 4.6 3.2 8.4 7.5 9.8 4.3-1.4 7.5-5.2 7.5-9.8V5.5L12 2.5Z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="m8.4 12.1 2.4 2.4 4.8-5.1" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <div><strong>АнтиСхема</strong><small>Проект команды «Интернет-защитники»</small></div>
+      </div>
+      <p>Школа № 2127 · 10 «И» класс · 2026</p>
+      <p class="footer-note">Сценарии вымышленные. Если столкнулся с мошенничеством — расскажи взрослым и обратись в банк.</p>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+</body>
+</html>

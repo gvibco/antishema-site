@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Тренажёр «АнтиСхема»: шесть коротких сценариев против интернет-мошенничества с разбором каждого ответа.">
+  <meta name="theme-color" content="#1d4ed8">
+  <title>Тренажёр — АнтиСхема</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#trainer">Перейти к тренажёру</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="АнтиСхема — на главную">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 2.5 4.5 5.5v6.2c0 4.6 3.2 8.4 7.5 9.8 4.3-1.4 7.5-5.2 7.5-9.8V5.5L12 2.5Z" fill="currentColor" opacity=".14"/>
+            <path d="M12 2.5 4.5 5.5v6.2c0 4.6 3.2 8.4 7.5 9.8 4.3-1.4 7.5-5.2 7.5-9.8V5.5L12 2.5Z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="m8.4 12.1 2.4 2.4 4.8-5.1" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>АнтиСхема</strong>
+          <small>тренажёр безопасности</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
+        <a href="index.html#how">Как работает</a>
+        <a href="trainer.html" aria-current="page">Тренажёр</a>
+        <a href="index.html#flags">Красные флаги</a>
+        <a href="index.html#about">О проекте</a>
+        <a class="button button-small" href="index.html">На главную</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="page-hero">
+      <div class="container page-hero-inner">
+        <a class="back-link" href="index.html">← На главную</a>
+        <p class="eyebrow"><span class="pulse-dot" aria-hidden="true"></span> Тренажёр</p>
+        <h1>Проверь, сможешь ли ты распознать обман</h1>
+        <p class="lead">Шесть коротких ситуаций из переписки. Выбирай безопасный ответ, получай разбор и запоминай правила, которые защищают деньги и аккаунты.</p>
+        <div class="page-hero-meta">
+          <span>6 заданий</span>
+          <span>2 формата</span>
+          <span>около 5 минут</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section trainer-section trainer-page" id="trainer">
+      <div class="container">
+        <div class="trainer-shell" id="trainer-shell">
+          <noscript>
+            <p class="notice">Для тренажёра нужен JavaScript. Включи его в настройках браузера и обнови страницу.</p>
+          </noscript>
+        </div>
+        <p class="trainer-note">Сценарии вымышленные. Если столкнулся с мошенничеством — расскажи взрослым и обратись в банк.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 2.5 4.5 5.5v6.2c0 4.6 3.2 8.4 7.5 9.8 4.3-1.4 7.5-5.2 7.5-9.8V5.5L12 2.5Z" fill="currentColor" opacity=".14"/>
+            <path d="M12 2.5 4.5 5.5v6.2c0 4.6 3.2 8.4 7.5 9.8 4.3-1.4 7.5-5.2 7.5-9.8V5.5L12 2.5Z" stroke="currentColor" stroke-width="1.6"/>
+            <path d="m8.4 12.1 2.4 2.4 4.8-5.1" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <div><strong>АнтиСхема</strong><small>Проект команды «Интернет-защитники»</small></div>
+      </div>
+      <p>Школа № 2127 · 10 «И» класс · 2026</p>
+      <p class="footer-note">Сценарии вымышленные. Если столкнулся с мошенничеством — расскажи взрослым и обратись в банк.</p>
+    </div>
+  </footer>
+
+  <script src="js/scenarios.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/trainer.js"></script>
+</body>
+</html>
