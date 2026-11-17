@@ -84,7 +84,7 @@
         <button class="button" type="button" data-action="start">
           Начать тренировку ${icons.arrow}
         </button>
-        <div class="start-note">${icons.lock} 6 заданий · без регистрации · около 5 минут</div>
+        <div class="start-note">${icons.lock} 10 заданий · без регистрации · около 7 минут</div>
       </div>`;
   }
 
@@ -246,7 +246,7 @@
         <ul class="rules-list">${rules}</ul>
         <div class="result-actions">
           <button class="button" type="button" data-action="restart">Пройти ещё раз ${icons.arrow}</button>
-          <a class="button button-ghost" href="index.html#flags">Открыть памятку</a>
+          <a class="button button-ghost" href="rules.html">Открыть правила</a>
         </div>
       </div>`;
 
