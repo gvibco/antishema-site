@@ -3,6 +3,16 @@
 
   const TYPES = ['dialog', 'recognize'];
 
+  function filterByCategory(scenarios, categoryId) {
+    if (!Array.isArray(scenarios)) return [];
+
+    if (!categoryId || categoryId === 'all') {
+      return scenarios.slice();
+    }
+
+    return scenarios.filter((scenario) => scenario && scenario.category === categoryId);
+  }
+
   function createGame(scenarios) {
     return {
       index: 0,
@@ -92,7 +102,45 @@
     };
   }
 
-  function validateScenarios(scenarios) {
+  function validateCategories(categories) {
+    const errors = [];
+
+    if (!Array.isArray(categories) || categories.length === 0) {
+      errors.push('Нужен список тем.');
+      return errors;
+    }
+
+    const ids = new Set();
+
+    categories.forEach((category, index) => {
+      const label = category && category.id ? category.id : `#${index + 1}`;
+
+      if (!category || typeof category !== 'object') {
+        errors.push(`Тема ${label}: должна быть объектом.`);
+        return;
+      }
+
+      if (!category.id) {
+        errors.push(`Тема ${label}: отсутствует id.`);
+      } else if (ids.has(category.id)) {
+        errors.push(`Тема ${label}: id повторяется.`);
+      } else {
+        ids.add(category.id);
+      }
+
+      if (!category.title) {
+        errors.push(`Тема ${label}: отсутствует название.`);
+      }
+
+      if (!category.description) {
+        errors.push(`Тема ${label}: отсутствует описание.`);
+      }
+    });
+
+    return errors;
+  }
+
+  function validateScenarios(scenarios, categories = null) {
     const errors = [];
 
     if (!Array.isArray(scenarios) || scenarios.length < 5) {
@@ -102,6 +150,9 @@
     if (!Array.isArray(scenarios)) return errors;
 
     const ids = new Set();
+    const knownCategories = Array.isArray(categories)
+      ? new Set(categories.map((category) => (category && category.id) || category))
+      : null;
 
     scenarios.forEach((scenario, index) => {
       const label = scenario && scenario.id ? scenario.id : `#${index + 1}`;
@@ -117,6 +168,12 @@
         errors.push(`Сценарий ${label}: id повторяется.`);
       } else {
         ids.add(scenario.id);
+      }
+
+      if (!scenario.category) {
+        errors.push(`Сценарий ${label}: не указана тема.`);
+      } else if (knownCategories && !knownCategories.has(scenario.category)) {
+        errors.push(`Сценарий ${label}: неизвестная тема «${scenario.category}».`);
       }
 
       if (!TYPES.includes(scenario.type)) {
@@ -157,7 +214,7 @@
     return errors;
   }
 
-  const api = { createGame, submitAnswer, getResult, validateScenarios };
+  const api = { createGame, submitAnswer, getResult, filterByCategory, validateScenarios, validateCategories };
 
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = api;
